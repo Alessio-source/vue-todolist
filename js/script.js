@@ -20,6 +20,9 @@ var app = new Vue({
     },
     removeListTask: function(index) {
       this.$delete(this.list, index);
+    },
+    removeListTask2: function(index) {
+      this.list.splice(index, 1);
     }
   }
 })
