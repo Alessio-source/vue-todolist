@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+    <title>TodoList vue</title>
+  </head>
+  <body>
+
+    <main id="app">
+
+      <input id="inputHTML" @keydown.13="addListTask" type="text" name="" value="" placeholder="Aggiungi una cosa da fare!">
+      <button type="button" name="button" @click="addListTask">Aggiungi</button>
+
+      <ul>
+        <li v-for="(item, index) in list">{{ item }} <span class="remove" @click="removeListTask(index)">X</span></li>
+      </ul>
+    </main>
+
+    <script src="js/script.js" charset="utf-8"></script>
+  </body>
+</html>
