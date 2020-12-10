@@ -10,13 +10,12 @@ var app = new Vue({
   },
   methods: {
     addListTask: function() {
-      var taskInput = document.getElementById("inputHTML").value;
-      
+      var taskInput = this.$refs.inputHTML.value;
       if (taskInput == "") {
         alert("Il campo è vuoto!")
       } else {
         this.list.push(taskInput);
-        document.getElementById("inputHTML").value = "";
+        this.$refs.inputHTML.value = "";
       }
     },
     removeListTask: function(index) {

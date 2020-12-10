@@ -17,7 +17,7 @@
     <main id="app">
 
       <div class="container-add">
-        <input id="inputHTML" @keydown.13="addListTask" type="text" name="" value="" placeholder="Aggiungi una cosa da fare!">
+        <input id="inputHTML" ref="inputHTML" @keydown.13="addListTask" type="text" name="" value="" placeholder="Aggiungi una cosa da fare!">
         <button type="button" name="button" @click="addListTask">Aggiungi</button>
       </div>
 
